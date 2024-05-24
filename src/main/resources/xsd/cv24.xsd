@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+    <xs:element name="cv">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="genre" type="xs:string"/>
+                <xs:element name="prenom" type="xs:string"/>
+                <xs:element name="nom" type="xs:string"/>
+                <xs:element name="objectif" type="xs:string"/>
+                <xs:element name="diplome" type="xs:string"/>
+                <xs:element name="date" type="xs:string"/>
+                <xs:element name="mel" type="xs:string"/>
+            </xs:sequence>
+            <xs:attribute name="id" type="xs:int"/>
+        </xs:complexType>
+    </xs:element>
+
+</xs:schema>

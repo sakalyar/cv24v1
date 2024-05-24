@@ -1,0 +1,55 @@
+<!-- src/main/resources/templates/cvlist.html -->
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CV List</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        th, td {
+            border: 1px solid #dddddd;
+            text-align: left;
+            padding: 8px;
+        }
+        th {
+            background-color: #f2f2f2;
+        }
+    </style>
+</head>
+<body>
+    <h1>CV List</h1>
+    <table>
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Genre</th>
+                <th>Prénom</th>
+                <th>Nom</th>
+                <th>Objectif</th>
+                <th>Diplôme</th>
+                <th>Date</th>
+                <th>Email</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr th:each="cv : ${cvs}">
+                <td th:text="${cv.id}"></td>
+                <td th:text="${cv.genre}"></td>
+                <td th:text="${cv.prenom}"></td>
+                <td th:text="${cv.nom}"></td>
+                <td th:text="${cv.objectif}"></td>
+                <td th:text="${cv.diplome}"></td>
+                <td th:text="${cv.date}"></td>
+                <td th:text="${cv.mel}"></td>
+            </tr>
+        </tbody>
+    </table>
+</body>
+</html>

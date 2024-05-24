@@ -1,6 +1,9 @@
-<cv>
-	<nom>CLARKE</nom>
-	<prenom>Joan</prenom>
-	<datenais>1917/06/04</datenais>
-	<mel>enigma@turing.uk</mel>
+<cv id="1">
+    <genre>Female</genre>
+    <prenom>Joan</prenom>
+    <nom>CLARKE</nom>
+    <objectif>Software Engineer</objectif>
+    <diplome>MSc Mathematics</diplome>
+    <date>1917/06/04</date>
+    <mel>enigma@turing.uk</mel>
 </cv>

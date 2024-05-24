@@ -1,2 +1,8 @@
 fr/univrouen/cv24/ServletInitializer.class
+fr/univrouen/cv24/model/TestCV.class
+fr/univrouen/cv24/controllers/PostController.class
+fr/univrouen/cv24/util/Fichier.class
+fr/univrouen/cv24/model/CVList.class
+fr/univrouen/cv24/controllers/GetController.class
 fr/univrouen/cv24/Cv24v1Application.class
+fr/univrouen/cv24/controllers/IndexController.class

@@ -8,8 +8,8 @@ import jakarta.xml.bind.annotation.XmlElement;
 import jakarta.xml.bind.annotation.XmlRootElement;
 import jakarta.xml.bind.annotation.XmlAccessType;
 
-@XmlRootElement(name = "TestCV")
-@XmlAccessorType(XmlAccessType.NONE)
+@XmlRootElement(name = "cv")
+@XmlAccessorType(XmlAccessType.FIELD)
 public class TestCV implements Serializable {
     private static final long serialVersionUID = 2024L;
     private static int compteur = 1;
@@ -18,7 +18,19 @@ public class TestCV implements Serializable {
     private Integer id;
 
     @XmlElement
+    private String genre;
+
+    @XmlElement
+    private String prenom;
+
+    @XmlElement
     private String nom;
+
+    @XmlElement
+    private String objectif;
+
+    @XmlElement
+    private String diplome;
 
     @XmlElement
     private String date;
@@ -26,19 +38,90 @@ public class TestCV implements Serializable {
     @XmlElement
     private String mel;
 
-    public TestCV(String nom, String prenom, String date, String mel) {
-        super();
+    public TestCV() {
         this.id = compteur++;
+    }
+
+    public TestCV(String genre, String prenom, String nom, String objectif, String diplome, String date, String mel) {
+        this.id = compteur++;
+        this.genre = genre;
+        this.prenom = prenom;
         this.nom = nom;
+        this.objectif = objectif;
+        this.diplome = diplome;
         this.date = date;
         this.mel = mel;
     }
 
-    public TestCV() {
+    // Getters and setters...
+
+    public Integer getId() {
+        return id;
+    }
+
+    public void setId(Integer id) {
+        this.id = id;
+    }
+
+    public String getGenre() {
+        return genre;
+    }
+
+    public void setGenre(String genre) {
+        this.genre = genre;
+    }
+
+    public String getPrenom() {
+        return prenom;
+    }
+
+    public void setPrenom(String prenom) {
+        this.prenom = prenom;
+    }
+
+    public String getNom() {
+        return nom;
+    }
+
+    public void setNom(String nom) {
+        this.nom = nom;
+    }
+
+    public String getObjectif() {
+        return objectif;
+    }
+
+    public void setObjectif(String objectif) {
+        this.objectif = objectif;
+    }
+
+    public String getDiplome() {
+        return diplome;
+    }
+
+    public void setDiplome(String diplome) {
+        this.diplome = diplome;
+    }
+
+    public String getDate() {
+        return date;
+    }
+
+    public void setDate(String date) {
+        this.date = date;
+    }
+
+    public String getMel() {
+        return mel;
+    }
+
+    public void setMel(String mel) {
+        this.mel = mel;
     }
 
     @Override
     public String toString() {
-        return "CV (" + id + ") [" + nom + ", Date=" + date + ", mel=" + mel + "]";
+        return "TestCV [id=" + id + ", genre=" + genre + ", prenom=" + prenom + ", nom=" + nom + ", objectif=" + objectif
+                + ", diplome=" + diplome + ", date=" + date + ", mel=" + mel + "]";
     }
 }
